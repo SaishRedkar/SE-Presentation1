@@ -20,12 +20,13 @@
     <textarea id="source">
 
 #<center>**What is Black box testing?**</center>
-<br>
 ##<u>Definition:</u>
 **Black box testing is a method of software testing that examines the functionality of an application without peering into its internal 
 structures or workings. Knowledge of the internal logic of the system being tested is not required.**
 <br><br>
-The tester has a set of input values and a set of expected output values and is unaware of how the inputs are transformed into those outputs. Since the tester is not able to view what happens on the inside, hence the name blackbox.
+Blackbox testign is done from the customer's perspective. The tester has a set of input values and a set of expected output values and is unaware of how the inputs are transformed into those outputs. Since the tester is not able to view what happens on the inside, hence the name blackbox.
+<br><br>
+The main purpose of the Black Box is to check whether the software is working as per expected in requirement document & whether it is meeting the user expectations or not.
 
 ---
 
@@ -37,13 +38,14 @@ The tester has a set of input values and a set of expected output values and is 
 	<li>Black-box testing is most commonly used type of testing in traditional organizations that have testers as a separate department, especially when they are not proficient in coding and have difficulties to understand the code. It provides external perspective of the software under test.</li><br>
 	<li>Since the requirements are an important part of this, it helps in identifying any uncertain, incomplete or inconsistent requirements.</li><br>
 	<li>Black box testing handles explicit or stated requirements and implied requirements. Eg: Page numbers, dates, headers, footers etc all improve readibility of the document for the customer.</li><br>
+	<li>Blackbox testing handles both valid and invalid inputs. Testing for invalid inputs is important as the customer could enter an input incorrectly. It is essential that the software is able to handle such inputs.</li>
 </ul>
 ---
 
 #<center>**Advantages of Black box testing**</center>
 <ul>
 	<li>The testing team works independently of the design time. This removes all bias while testing the particular product.</li><br>
-	<li>In other testing techniques, the tester must require some technical knowledge or some prgogramming language. Since black box testing does not require any knowledge of the interntal logic, a non-technical person could also perform testing.</li><br>
+	<li>In other testing techniques, the tester must require some technical knowledge or some programming language. Since black box testing does not require any knowledge of the interntal logic, a non-technical person could also perform testing.</li><br>
 	<li>It helps in identifying cases where requirements are inconsistent or missing or ambigious.</li><br>
 	<li>The testing is performed with the end-user's perspective.</li><br>
 	<li>Once the functional specifications are complete, the test cases can be desgined immediately.</li><br>
@@ -52,12 +54,22 @@ The tester has a set of input values and a set of expected output values and is 
 
 #<center>**Disdvantages of Black box testing**</center>
 <ul>
-	<li>The reason for failures is not found.</li><br>
-	<li>Not all properties of the software system can be tested efficiently. This may lead to a number of paths not being tested.</li><br>
+	<li>The reason for failures is not found as the internal logic is not explored.</li><br>
+	<li>Not all properties of the software system can be tested efficiently. This may lead to a number of paths not being tested.Especially when it comes to testing for invalid inputs.</li><br>
 	<li>Certain segments of the code may be more complex and require more testing. This becomes difficult using black box testing.</li><br>
 	<li>Since the testing team works independently some tests which have already been covered, may get repeated.</li><br>
 	<li>Without having clear specifications, designing test cases becomes difficult.</li><br>
 </ul>
+
+---
+
+#<center>**Blackbox Testing vs Whitebox Testing**</center>
+
+There is no simple answer to the question as to which testing methodology is the better one. Both the testing methodologies focus on different aspects of the software.<br><br> 
+Blackbox testing is more concerned about the results produced when fed a certain input. It tests the user's experience with the software<br><br>
+Whitebox testing pays attention to the details and inner workings of the software. It focuses on the internal structure and attempts to make sure that the software works as efficiently as possible
+<br><br>
+Therefore, both these testing methodlogies compliment each should be used to ensure that the software is tested as comprehensively as possible.
 
 ---
 
@@ -75,7 +87,7 @@ The tester has a set of input values and a set of expected output values and is 
 
 ---
 
-<u>Requirement Traceability Matrix :</u><br>
+<b>Requirement Traceability Matrix :</b><br>
 <br>A Requirement Traceability Matrix (RTM) is used to keep track of the various requirements from the beginning keeps on changing as the lifecycle of the product goes on.<br>
 <ul>
 	<li>Each requirement is given a unique id and is briefly described. This information is collected from the SRS itself.</li><br>
@@ -87,7 +99,7 @@ As the life-cycle and the testing continues, the cross-reference between the req
 
 
 ---
-<b>Example :</b><br>
+<b>Example :</b>
 Let us take a lock and key. We do not know how the levers in the lock work, but we only know the set of inputs (the number of keys, specific sequence of using the keys and the direction of turn of each key) and the expected outcome (locking and unlocking).For example, if a key is turned clockwise it should unlock and if turned anticlockwise it should lock.
 
 <center>Requirement Traceability Matrix<center>
@@ -97,11 +109,11 @@ Let us take a lock and key. We do not know how the levers in the lock work, but 
 
 There are different types of relationships between the requirements and test cases:
 <ul>
-	<li><b>One to one</b> – For each requirement there is a single test is performed</li><br>
-	<li><b>One to many</b> – For eachrequirement there are multiple test cases.</li><br>
-	<li><b>Many to one</b> – For a set of requirements a single test case is performed.</li><br>
-	<li><b>Many to many</b> – For a set requirements,multiple test cases are performed. This occurs in integration and system testing.</li><br>
-	<li><b>One to none</b> - The requirement has no test cases. In this case the testing team should make a decsision on how to deal with this requirement.</li><br>
+	<li><b>One to one</b> – For each requirement there is a single test that is performed</li><br>
+	<li><b>One to many</b> – For each requirement there are multiple test cases.</li><br>
+	<li><b>Many to one</b> – For a set of requirements there is a single test that is performed.</li><br>
+	<li><b>Many to many</b> – For a set of requirements there are multiple tests that are performed. This occurs in integration and system testing.</li><br>
+	<li><b>One to none</b> - The requirement has no test cases. In this case the testing team should make at decsision on how to deal with this requirement.</li><br>
 </ul>
 
 Some requirements require testing in multiple phases of the life-cycle. This criteria could also be mentioned in the RTM.
@@ -120,19 +132,20 @@ Some requirements require testing in multiple phases of the life-cycle. This cri
 
 #<center>**Positive and Negative Testing**</center>
 
-<b><u>Positive Testing :</u></b><br>
-Positive testing is done to check whether the system does what it is supposed to do when given correct input. It is done to ensure that it matches the specifications and works as expected.<br><br>
+<b><u>Positive Testing :</u></b><br><br>
+Positive testing is done to check whether the system does what it is supposed to do when given correct input. It is done to ensure that it matches the specifications and works as expected.The tester only tests for a valid set of inputs. If no error is expected, then no error should be displayed. If an error is expected, then an error message should be displayed.<br><br>
 
-<b><u>Negative Testing :</u></b><br>Negative testing is used to cover those areas for which the product is not designed or coded. Certain inputs may not be covered in the specification. When these inputs are encountered, the system should not crash and be able to handle   those scenarios properly. 
+<b><u>Negative Testing :</u></b><br><br>
+Negative testing is used to cover those areas for which the product is not designed or coded. Certain inputs may not be covered in the specification. When these inputs are encountered, the system should not crash and be able to handle those scenarios properly. The main intention of this testing is to check whether software application does not show error when supposed to and shows an	 error when not supposed to.
 
 ---
-<b>Example :</b><br>
-Let us take a lock and key. We do not know how the levers in the lock work, but we only know the set of inputs (the number of keys, specific sequence of using the keys and the direction of turn of each key) and the expected outcome (locking and	unlocking). For example, if a key is turned clockwise it should unlock and if turned anticlockwise it should lock.<br>
+<b>Example :</b>Let us take a lock and key. We do not know how the levers in the lock work, but we only know the set of inputs (the number of keys, specific sequence of using the keys and the direction of turn of each key) and the expected outcome (locking and	unlocking). For example, if a key is turned clockwise it should unlock and if turned anticlockwise it should lock.<br>
 <center>Positive Testing<br>
 ![Positve Testing](PositiveTesting.png)<br>
 Negative Testing<br>
-![Negative Testing](NegativeTesting.png)</center><br>
-<b>Diasdvantage:</b><br>
+![Negative Testing](NegativeTesting.png)</center>
+The negative testing test cases has covered those areas that the system was not designed for.<br><br>
+<b>Diasdvantage:</b>
 The problem with negative testing is the coverage. For positive testing, coverage is 100% if all the requirements that are specifed are tested. But for negative testing, there are no requirements that are specified. Achieving 100% coverage for negative testing is impractical. 
 ---
 #<center>**Boundary Value Analysis**</center>
@@ -146,15 +159,18 @@ Boundaries are the limits of the values of the variables. Generally the errors n
 Boundary Value Analysis is useful to generate test cases when the input data is made up of clearly identifiable boundaries or ranges. 
 
 ---
+<center>Boundary Value Analysis Example<center>
+![BVA for example](BVA.png)
 
-In order to perform boundary value testing:<br>.
+---
+
+In order to perform boundary value testing:<br>
 <ul>
 	<li>There should be some discontinuity in data values which affect the system. These discontinuities are where the boundaries exist.</li><br>
 	<li>Identify the limits. The test cases should be developed to test the software system at these values.</li><br>
 	<li>Test the boundaries for hardware requirements also. Eg: If min RAM of a software system is 1GB, this particular boundary should also be tested.</li><br>
 
 Boundary value analysis can also apply to white box testing techniques where the boundaries of data structures like arrays, stacks, queues can also be tested. 
----
 
 	</textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
