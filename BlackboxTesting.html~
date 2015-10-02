@@ -149,8 +149,8 @@ Boundary Value Analysis is useful to generate test cases when the input data is 
 
 In order to perform boundary value testing:<br>.
 <ul>
-	<li>There should be some discontinuity in data values which affect the system. These discontinuities are where the boundaries exist.</li><br>
-	<li>Identify the limits. The test cases should be developed to test the software system at these values.</li><br>
+	<li>There should be some discontinuity in data values which affect the system. These discontinuities are where the boundaries exist.<li><br>
+	<li>Identify the limits. The test cases should be developed to test the software system at these values.<li><br>
 	<li>Test the boundaries for hardware requirements also. Eg: If min RAM of a software system is 1GB, this particular boundary should also be tested.</li><br>
 
 Boundary value analysis can also apply to white box testing techniques where the boundaries of data structures like arrays, stacks, queues can also be tested. 
