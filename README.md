@@ -2,4 +2,4 @@
 ## Presentation I
 ### Nehal Kamat | Saish Redkar | Siddharth Pant
 
-#### Link to presentation : https://github.com/siddharthpant92/SE-Presentation1/blob/master/White_Blackbox_Testing.html
+#### Link to presentation : http://siddharthpant92.github.io/White_Blackbox_Testing.html#1
